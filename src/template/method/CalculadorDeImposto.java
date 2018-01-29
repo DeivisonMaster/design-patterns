@@ -2,8 +2,9 @@ package template.method;
 
 public class CalculadorDeImposto {
 	
+	// calculo do imposto em cima do valor do orçamento
 	public void realizaCalculo(Orcamento orcamento, Imposto imposto){
-		double desconto = imposto.calcula(orcamento);
-		System.out.println(desconto);
+		double calculoImposto = imposto.calcula(orcamento);
+		System.out.println(calculoImposto);
 	}
 }

@@ -12,6 +12,7 @@ public class Item {
 	public String getNome() {
 		return nome;
 	}
+
 	public double getValor() {
 		return valor;
 	}

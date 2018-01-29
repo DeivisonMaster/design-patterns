@@ -9,7 +9,7 @@ public class SemDesconto implements Desconto{
 
 	@Override
 	public void setProximo(Desconto proximo) {
-		// a própria classe encerra os descontos
+		// TODO Auto-generated method stub
 	}
-	
+
 }

@@ -1,16 +1,8 @@
 package template.method;
 
-public class IKCV implements Imposto{
-
-	@Override
-	public double calcula(Orcamento orcamento) {
-		if(orcamento.getValor() > 500 && temItemMaiorQue100ReaisNo(orcamento)){
-			return orcamento.getValor() * 0.10;
-		}else{
-			return orcamento.getValor() * 0.06;
-		}
-	}
-
+public class IKCV extends TemplateImpostoCondicional {
+	// calcula a taxação máxima e minima
+	
 	private boolean temItemMaiorQue100ReaisNo(Orcamento orcamento) {
 		for(Item item : orcamento.getItens()){
 			if(item.getValor() > 100){
@@ -18,6 +10,21 @@ public class IKCV implements Imposto{
 			}
 		}
 		return false;
+	}
+
+	@Override
+	public double minimaTaxacao(Orcamento orcamento) {
+		return orcamento.getValor() * 0.06;
+	}
+
+	@Override
+	public double maximaTaxacao(Orcamento orcamento) {
+		return orcamento.getValor() * 0.10;
+	}
+
+	@Override
+	public boolean deveUsarMaximaTaxacao(Orcamento orcamento) {
+		return orcamento.getValor() > 500  && temItemMaiorQue100ReaisNo(orcamento);
 	}
 
 }

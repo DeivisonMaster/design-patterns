@@ -1,14 +1,13 @@
 package template.method;
 
-public class DescontoPorCincoItens implements Desconto{
+public class DescontoPorCincoItens implements Desconto {
 	private Desconto proximo;
 
-	@Override
 	public double desconto(Orcamento orcamento) {
-		if(orcamento.getItens().size() > 5){
+		if (orcamento.getItens().size() > 5) {
 			return orcamento.getValor() * 0.1;
-		}else{
-			return proximo.desconto(orcamento);
+		} else {
+			return this.proximo.desconto(orcamento);
 		}
 	}
 
@@ -16,5 +15,5 @@ public class DescontoPorCincoItens implements Desconto{
 	public void setProximo(Desconto proximo) {
 		this.proximo = proximo;
 	}
-	
+
 }
