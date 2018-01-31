@@ -1,7 +1,6 @@
 package decorator;
 
-public class IKCV extends TemplateImpostoCondicional {
-	// calcula a taxação máxima e minima
+public class IKCV extends TemplateImpostoCondicional{
 	
 	private boolean temItemMaiorQue100ReaisNo(Orcamento orcamento) {
 		for(Item item : orcamento.getItens()){
@@ -24,7 +23,6 @@ public class IKCV extends TemplateImpostoCondicional {
 
 	@Override
 	public boolean deveUsarMaximaTaxacao(Orcamento orcamento) {
-		return orcamento.getValor() > 500  && temItemMaiorQue100ReaisNo(orcamento);
+		return orcamento.getValor() > 500 && temItemMaiorQue100ReaisNo(orcamento);
 	}
-
 }

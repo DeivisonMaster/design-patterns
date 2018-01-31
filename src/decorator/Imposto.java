@@ -2,7 +2,7 @@ package decorator;
 
 public abstract class Imposto {
 	protected Imposto outroImposto;
-	
+
 	public Imposto(Imposto outroImposto){
 		this.outroImposto = outroImposto;
 	}
@@ -15,5 +15,4 @@ public abstract class Imposto {
 		if(outroImposto == null) return 0;
 		return outroImposto.calcula(orcamento);
 	}
-	
 }

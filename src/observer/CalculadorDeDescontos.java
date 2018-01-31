@@ -1,18 +1,15 @@
-package chain.of.responsibility;
+package observer;
 
-public class CalculadorDeDesconto {
+public class CalculadorDeDescontos {
 
 	public double calcula(Orcamento orcamento) {
 		Desconto descontoPorCincoItens = new DescontoPorCincoItens();
 		Desconto descontoPorMaisDeQuinhentosReais = new DescontoPorMaisDeQuinhentosReais();
-		Desconto semDesconto = new SemDesconto(); // indica o fim dos descontos
+		Desconto semDesconto = new SemDesconto();
 		
-		
-		// informo o proximo desconto a ser invocado caso o primeiro desconto falhe
 		descontoPorCincoItens.setProximo(descontoPorMaisDeQuinhentosReais);
 		descontoPorMaisDeQuinhentosReais.setProximo(semDesconto);
 		
-		// primeiro desconto
 		return descontoPorCincoItens.desconto(orcamento);
 	}
 }

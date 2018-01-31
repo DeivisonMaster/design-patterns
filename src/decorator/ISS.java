@@ -1,17 +1,14 @@
 package decorator;
 
-public class ISS extends Imposto {
+public class ISS extends Imposto{
 	
-	public ISS(Imposto outroImposto){
-		super(outroImposto);
+	public ISS(Imposto imposto){
+		super(imposto);
 	}
 	
-	public ISS(){
-		
-	}
+	public ISS(){}
 	
-	@Override
-	public double calcula(Orcamento orcamento) {
+	public double calcula(Orcamento orcamento){
 		return orcamento.getValor() * 0.06 + calculoDoOutroImposto(orcamento);
 	}
 

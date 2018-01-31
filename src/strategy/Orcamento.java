@@ -1,10 +1,10 @@
 package strategy;
 
 public class Orcamento {
-	
+
 	private double valor;
 
-	public Orcamento(double valor){
+	public Orcamento(double valor) {
 		this.valor = valor;
 	}
 	

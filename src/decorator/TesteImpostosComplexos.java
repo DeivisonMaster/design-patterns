@@ -3,10 +3,10 @@ package decorator;
 public class TesteImpostosComplexos {
 	public static void main(String[] args) {
 		Imposto iss = new ISS();
-		Imposto	impostoIssIcms	= new ISS(new ICMS());
-		Orcamento orcamento = new Orcamento(500.0);
+		Imposto issComIcms = new ISS(new ICMS());
+		Orcamento orcamento = new Orcamento(500);
 		
-		double valor = impostoIssIcms.calcula(orcamento);
+		double valor = issComIcms.calcula(orcamento);
 		System.out.println(valor);
-	}
+	} 
 }

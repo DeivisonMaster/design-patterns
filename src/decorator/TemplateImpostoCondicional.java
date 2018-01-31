@@ -1,8 +1,7 @@
 package decorator;
 
-public abstract class TemplateImpostoCondicional extends Imposto{
-	// Semelhança entre impostos ou entre CLASSES!
-	
+public abstract class TemplateImpostoCondicional extends Imposto {
+
 	@Override
 	public double calcula(Orcamento orcamento) {
 		if(deveUsarMaximaTaxacao(orcamento)){

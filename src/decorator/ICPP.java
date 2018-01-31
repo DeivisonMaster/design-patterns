@@ -1,8 +1,16 @@
 package decorator;
 
 public class ICPP extends TemplateImpostoCondicional {
-	// calcula a taxação máxima e minima
-	
+
+	@Override
+	public double calcula(Orcamento orcamento) {
+		if(orcamento.getValor() > 500){
+			return orcamento.getValor() * 0.07;
+		}else{
+			return orcamento.getValor() * 0.05;
+		}
+	}
+
 	@Override
 	public double minimaTaxacao(Orcamento orcamento) {
 		return orcamento.getValor() * 0.05;

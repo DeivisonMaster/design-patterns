@@ -11,5 +11,5 @@ public class SemDesconto implements Desconto{
 	public void setProximo(Desconto proximo) {
 		// TODO Auto-generated method stub
 	}
-
+	
 }

@@ -1,8 +1,7 @@
 package template.method;
 
-public abstract class TemplateImpostoCondicional implements Imposto{
-	// Semelhança entre impostos ou entre CLASSES!
-	
+public abstract class TemplateImpostoCondicional implements Imposto {
+
 	@Override
 	public double calcula(Orcamento orcamento) {
 		if(deveUsarMaximaTaxacao(orcamento)){

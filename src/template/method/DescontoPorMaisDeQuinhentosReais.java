@@ -3,11 +3,11 @@ package template.method;
 public class DescontoPorMaisDeQuinhentosReais implements Desconto{
 	private Desconto proximo;
 
-	public double desconto(Orcamento orcamento) {
-		if (orcamento.getValor() > 500) {
+	public double desconto(Orcamento orcamento){
+		if(orcamento.getValor() > 500){
 			return orcamento.getValor() * 0.07;
-		} else {
-			return this.proximo.desconto(orcamento);
+		}else{
+			return proximo.desconto(orcamento);
 		}
 	}
 
